@@ -24,5 +24,4 @@ Welcome to the Weather App project! This application fetches and displays real-t
 ## Acknowledgments  
 
 - [The Odin Project](https://www.theodinproject.com/) for the project inspiration and guidance  
-- [OpenWeatherMap](https://openweathermap.org/) for providing the free weather API  
-- [Tabler Icons](https://tabler-icons.io/) for weather icons (if applicable)  
+- [VisualCrossing API](https://www.visualcrossing.com/weather-api) for providing the free weather API 
