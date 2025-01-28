@@ -21,7 +21,7 @@ export default function handleConditions(data, usOrMetric) {
     const temp = usOrMetric === 'us' ? +tempInF : +tempInC
     const feelsLike = usOrMetric === 'us' ? +feelsLikeInF : +feelsLikeInC
 
-
+    console.log(currentConditions)
 
 
     return {

@@ -10,6 +10,7 @@ const conditions = getConditions('bat cave')
 conditions.then(data => {
     const weather = handleConditions(data)
     changeUI(weather)
+    getBackgroundGif(weather)
 })
 
 // add event listener to search form to get conditions for city
@@ -19,9 +20,11 @@ searchForm.addEventListener('submit', (e) => {
     const inputField = document.querySelector('.search-input')
     const city = inputField.value
     const conditions = getConditions(city)
+
     conditions.then(data => {
         const weather = handleConditions(data)
         changeUI(weather)
+        getBackgroundGif(weather)
         inputField.value = ''
     })
 })
