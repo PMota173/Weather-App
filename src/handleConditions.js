@@ -1,5 +1,5 @@
 export default function handleConditions(data, usOrMetric) {
- 
+
     // variables that doesn't need to be converted
     const cityName = data.resolvedAddress
     const preciptationProb = data.currentConditions.precipprob
@@ -20,8 +20,6 @@ export default function handleConditions(data, usOrMetric) {
 
     const temp = usOrMetric === 'us' ? +tempInF : +tempInC
     const feelsLike = usOrMetric === 'us' ? +feelsLikeInF : +feelsLikeInC
-
-    console.log(currentConditions)
 
 
     return {

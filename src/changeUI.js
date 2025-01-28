@@ -1,4 +1,4 @@
-export function changeUI(weather, backgroundGif, metricSystem) {
+export function changeUI(weather, metricSystem) {
 
    
     const cityName = document.querySelector('.city-name')

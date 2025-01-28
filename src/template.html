@@ -9,10 +9,12 @@
     <div class="container">
 
         <h1>Weather App</h1>
+        
         <form class="search-form" action="">
             <input type="text" name="city" id="city" class="search-input" placeholder="Enter city name">
             <button type="submit">Get Weather</button>
         </form>
+
         <div class="data">
             <h3>Location:
                 <span class="city-name"></span>
@@ -50,9 +52,12 @@
                 <span class="us units"></span>
             </h3>
         </div>
-        <h3 class="units-btn">Select units:</h3>
-        <button class="us-btn">°F</button>
-        <button class="metric-btn">°C</button>
+        <div class="select-unit-div">
+            <h3 class="units-btn">Select units:</h3>
+            <button class="us-btn selected">°F</button>
+            <button class="metric-btn">°C</button>
+        </div>
+
     </div>
 </body>
 </html>

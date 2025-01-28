@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #645bff;
+    --secondary-color: #fff;
+    --hover-color: #7871fc;
+    --selected-color: #443eaf;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+}
 body { 
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -14,8 +22,8 @@ body {
     margin: 20px;
     padding: 20px;
     height: fit-content;
-
-    background-color: #ffffffd2;
+    background-color: #292929ee;
+    color: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -23,4 +31,41 @@ body {
     align-items: center;
 }
 
+.search-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
+.search-form input {
+    width: 200px;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+button {
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+button:hover {
+background-color: var(--hover-color);
+}
+
+button:hover {
+right: 0;
+}
+
+.selected {
+background-color: var(--selected-color);
+}
