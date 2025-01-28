@@ -7,8 +7,11 @@ export default function changeUnits() {
     const metricButton = document.querySelector('.metric-btn')
     const usButton = document.querySelector('.us-btn')
     
-
+    // Add event listeners to buttons
     metricButton.addEventListener('click', () => {
+        // Get the location from the UI
+        // Get the conditions for that location
+        // Error handling for the fetch operation and processing of the data
         try {
             const location = document.querySelector('.city-name').textContent
             const conditions = getConditions(location)
@@ -27,7 +30,6 @@ export default function changeUnits() {
 
     usButton.addEventListener('click', () => {
         try {
-
             const location = document.querySelector('.city-name').textContent
             const conditions = getConditions(location, 'us')
             conditions.then(data => {

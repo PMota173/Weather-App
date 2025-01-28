@@ -14,11 +14,13 @@ export default function handleConditions(data, usOrMetric) {
     const windSpeed = usOrMetric === 'us' ? +windSpeedInMph : +windSpeedInKm
     
     const tempInF = (data.currentConditions.temp).toFixed(2)
-    const feelsLikeInF = (data.currentConditions.feelslike).toFixed(2)
     const tempInC = (((tempInF - 32) / 9 ) * 5).toFixed(2)
-    const feelsLikeInC = (((feelsLikeInF - 32) / 9 ) * 5).toFixed(2)
 
     const temp = usOrMetric === 'us' ? +tempInF : +tempInC
+
+    const feelsLikeInF = (data.currentConditions.feelslike).toFixed(2)
+    const feelsLikeInC = (((feelsLikeInF - 32) / 9 ) * 5).toFixed(2)
+
     const feelsLike = usOrMetric === 'us' ? +feelsLikeInF : +feelsLikeInC
 
 

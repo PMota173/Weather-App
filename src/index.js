@@ -6,10 +6,10 @@ import getBackgroundGif from "./getBackgroundGIF.js"
 import { changeUI } from "./changeUI.js"
 import changeUnits from "./changeUnits.js"
 
-// get information from default location
+// Initial load
 getConditions('bat cave')
     .then(data => {
-        const weather = handleConditions(data)
+        const weather = handleConditions(data, 'us')
         changeUI(weather)
         getBackgroundGif(weather)
     })
@@ -17,16 +17,19 @@ getConditions('bat cave')
         console.error('Initial load error:', error)
     })
 
-// add event listener to search form to get conditions for city
+// Add event listener to search form
 const searchForm = document.querySelector('.search-form')
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const inputField = document.querySelector('.search-input')
     const city = inputField.value
 
+    // Error handling for the fetch operation
     try {
+        // Disable the input field and search form
         inputField.disabled = true
         searchForm.disabled = true
+        
         const conditions = getConditions(city)
         const selectedUit = document.querySelector('.selected').textContent.toLowerCase()
         
@@ -45,10 +48,12 @@ searchForm.addEventListener('submit', (e) => {
                     inputField.value = ''
                 }
             } 
+            // Catch any errors that occur during the processing of the data
             catch (innerError) {
                 console.error('Processing error:', innerError)
             }
         })
+        // Catch any errors that occur during the fetch operation
         .catch(error => {
             console.error('Fetch error:', error)
         })
@@ -57,12 +62,12 @@ searchForm.addEventListener('submit', (e) => {
         console.error('There was a problem with your fetch operation:', error)
     }
     finally {
+        // Enable the input field and search form
         inputField.disabled = false
         searchForm.disabled = false
     }
 })
 
-// add event listener to change units buttons
 changeUnits()
 
 

@@ -1,5 +1,4 @@
 export function changeUI(weather, metricSystem) {
-
    
     const cityName = document.querySelector('.city-name')
     const temp = document.querySelector('.temperature')

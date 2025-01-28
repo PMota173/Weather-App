@@ -11,6 +11,7 @@ export default function getBackgroundGIF(weather) {
         conditions = conditionsNotFormatted
     }
 
+    // Set the gifURL based on the weather conditions
     switch (conditions) {
         case 'Clear':
             gifURL = 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXRkcG9paml4cHRybzhxNmhyZXpmb204bmlvc3JsNjcxaG43d2l0diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/u01ioCe6G8URG/giphy.gif'
