@@ -9,26 +9,37 @@ export default function changeUnits() {
     
 
     metricButton.addEventListener('click', () => {
-        const location = document.querySelector('.city-name').textContent
-        const conditions = getConditions(location)
-        conditions.then(data => {
-            const weather = handleConditions(data, 'metric')
-            changeUI(weather, 'metric')
-            getBackgroundGif(weather)
-        })
-        metricButton.classList.add('selected')
-        usButton.classList.remove('selected')
+        try {
+            const location = document.querySelector('.city-name').textContent
+            const conditions = getConditions(location)
+            conditions.then(data => {
+                const weather = handleConditions(data, 'metric')
+                changeUI(weather, 'metric')
+                getBackgroundGif(weather)
+            })
+            metricButton.classList.add('selected')
+            usButton.classList.remove('selected')
+        }
+        catch (error) {
+            console.error('There was a problem with your fetch operation:', error)
+        }
     })
 
     usButton.addEventListener('click', () => {
-        const location = document.querySelector('.city-name').textContent
-        const conditions = getConditions(location, 'us')
-        conditions.then(data => {
-            const weather = handleConditions(data, 'us')
-            changeUI(weather, 'us')
-            getBackgroundGif(weather)
-        })
-        usButton.classList.add('selected')
-        metricButton.classList.remove('selected')
+        try {
+
+            const location = document.querySelector('.city-name').textContent
+            const conditions = getConditions(location, 'us')
+            conditions.then(data => {
+                const weather = handleConditions(data, 'us')
+                changeUI(weather, 'us')
+                getBackgroundGif(weather)
+            })
+            usButton.classList.add('selected')
+            metricButton.classList.remove('selected')
+        }
+        catch (error) {
+            console.error('There was a problem with your fetch operation:', error)
+        }
     })
 }
