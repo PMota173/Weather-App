@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="fce1bbcaab72c2252dc6.png" type="image/x-icon">
+    <title>Weather App</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="container">
+
+        <h1>Weather App</h1>
+        
+        <form class="search-form" action="">
+            <input type="text" name="city" id="city" class="search-input" placeholder="Enter city name">
+            <button type="submit">Get Weather</button>
+        </form>
+
+        <div class="data">
+            <h3>Location:
+                <span class="city-name"></span>
+                <span class="us units"></span>
+            </h3>
+            <h3>Temperature:   
+                <span class="temperature"></span>
+                <span class="us units"></span>
+            </h3>
+            <h3>Feels like:
+                <span class="feels-like"></span>
+                <span class="us units"></span>
+            </h3>
+            <h3>Conditions:    
+                <span class="current-conditions"></span>
+                <span class="us units"></span>
+            </h3>
+            <h3> Humidity:  
+                <span class="humidity"></span>
+                <span class="us units"></span>
+            </h3>
+            
+            <h3> Precipitation probability:
+                <span class="preciptation-prob"></span>
+                <span class="us units"></span>
+            </h3>
+            
+            <h3> Wind speed:
+                <span class="wind-speed"></span>
+                <span class="us units"></span>
+            </h3>
+            
+            <h3>
+                <span class="description"></span>
+                <span class="us units"></span>
+            </h3>
+        </div>
+        <div class="select-unit-div">
+            <h3 class="units-btn">Select units:</h3>
+            <button class="us-btn selected">°F</button>
+            <button class="metric-btn">°C</button>
+        </div>
+
+    </div>
+</body>
+</html>
