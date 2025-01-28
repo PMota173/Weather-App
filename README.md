@@ -19,7 +19,7 @@ Welcome to the Weather App project! This application fetches and displays real-t
 - CSS  
 - JavaScript (ES6+)  
 - Webpack (for module bundling)  
-- [OpenWeatherMap API](https://openweathermap.org/api) (weather data)  
+- [VisualCrossing API](https://www.visualcrossing.com/weather-api) (weather data)  
 
 ## Acknowledgments  
 
