@@ -29,13 +29,13 @@ searchForm.addEventListener('submit', (e) => {
         // Disable the input field and search form
         inputField.disabled = true
         searchForm.disabled = true
-        
+
         const conditions = getConditions(city)
         const selectedUit = document.querySelector('.selected').textContent.toLowerCase()
         
         conditions.then(data => {
             try {
-                if (selectedUit === 'metric') {
+                if (selectedUit === '°c') {
                     const weather = handleConditions(data, 'metric')
                     changeUI(weather, 'metric')
                     getBackgroundGif(weather)
